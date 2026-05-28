@@ -2,4 +2,25 @@ h1 {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
+  font-size: xx-large;
+
+}
+
+.ros6a{
+ background-color: #c693b9; 
+}
+
+.menu-nav{
+  color: white;
+}
+
+body {
+
+}
+
+#Inicio {
+    background-image: url('img/png'); 
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;  
 }
