@@ -2,7 +2,9 @@ h1 {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: xx-large;
+  font-size: 160px;
+  position: absolute;
+  top: 20%;
 
 }
 

@@ -18,58 +18,90 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
-<body style="background-color: #c693b9;">
-    <header class=" ">
-        <nav class="navbar navbar-expand-lg  ">
+<body style="background-image: radial-gradient(circle, #c693b9, #f9def4);">
+    <header>
+        <nav class="navbar fixed-top" style="background-color: #c693b9;">
             <div class="container-fluid">
-                <button class="navbar-toggler "  type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <a class="navbar-brand" style="color: #f9def4;" href="#">Portifólio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand text-light" href="#">Meu Site</a>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-opacity-75">
-                        <li class="nav-item menu-nav">
-                            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Meus Projetos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Projeto em destaque</a>
-                        </li>
-
-                    </ul>
-
+                <div class="offcanvas offcanvas-end" style="background-color: #f9def4;" tabindex="-1"
+                    id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="color: #5f4258;">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" style="color: #5f4258;" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="color: #5f4258;" href="#">Projetos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="color: #5f4258;" href="#">Exemplar</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <section id="Inicio" class="min-vh-100 " style="background-color: white;">
+        <section id="Inicio" class="min-vh-100 d-flex align-items-stretch" style="background-color: white;">
+            <div class="container d-flex flex-column justify-content-between py-5">
+
+                <div class="row">
+                    <div class="col-12 text-center" style="color: #c693b9;">
+                        <h1>Yasmin Teixeira</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <blockquote class="text-center border border-2 text-light p-5 rounded-4 fs-4"
+                            style="background-color:#c693b9; width: 100%;">
+                            Sábio é aquele que conhece os limites da própria ignorância.
+                        </blockquote>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="Sobre mim" class="min-vh-100 py-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 text-center " style="color: #c693b9;">
-                        <h1 >Yasmin Teixeira
-                        </h1>
+                    <div class="col-12 col-md-6">
+                        <img class=" border rounded-4" style="width: 320px; height: auto;" src="img/IMG_4141.jpg"
+                            alt="">
+
+
+
                     </div>
-                    <blockquote class="col-12  text-center border border-2  text-light p-4 rounded-4"
-                        style="background-color:#c693b9;">
-                        Sábio é aquele que conhece os limites da própria ignorância.
-                    </blockquote>
-                    <div>
+                    <div class="col-12 col-md-6">
+                        <h2>Olá, eu sou</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse ex praesentium exercitationem
+                            asperiores nisi. Repudiandae adipisci reiciendis at ullam placeat sed amet, deserunt laborum
+                            provident eius nemo cumque vero ab? Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Quod, dignissimos. Saepe, dignissimos vel exercitationem soluta facilis debitis
+                            tempore assumenda error quae ipsum repellendus iusto, eveniet nulla necessitatibus nisi
+                            maxime asperiores.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="Projetos" class="min-vh-100">
+        <section id="Projetos" class="min-vh-100 py-5">
             <div class="container">
                 <div>
-                    <h1 class="text-light">Todos os meus Projetos</h1>
+                    <h2 class="text-light">Todos os meus Projetos</h2>
                 </div>
                 <div class="row gap-1">
                     <div class="col-12 col-md-3 card bg py-3 " style="width: 16rem; background-color: #f9def4; ">
@@ -78,7 +110,7 @@
                             <h5 class="card-title">FrotaMatch</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card’s content.</p>
-                            <a href="#" class="btn btn-primary" style="background-color: #c693b9;">Vizualizar</a>
+                            <a href="#" class="btn btn-light text-light" style="background-color: #c693b9;">Vizualizar</a>
                         </div>
 
                     </div>
@@ -88,7 +120,7 @@
                             <h5 class="card-title">FrotaMatch</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card’s content.</p>
-                            <a href="#" class="btn btn-primary" style="background-color: #c693b9;">Vizualizar</a>
+                            <a href="#" class="btn btn-light text-light" style="background-color: #c693b9;">Vizualizar</a>
                         </div>
                     </div>
                     <div class="col-12 col-md-3 card bg py-3 " style="width: 16rem; background-color: #f9def4; ">
@@ -97,7 +129,7 @@
                             <h5 class="card-title">FrotaMatch</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card’s content.</p>
-                            <a href="#" class="btn btn-primary" style="background-color: #c693b9;">Vizualizar</a>
+                            <a href="#" class="btn btn-light text-light" style="background-color: #c693b9;">Vizualizar</a>
                         </div>
                     </div>
                     <div class="col-12 col-md-3 card bg py-3 " style="width: 16rem; background-color: #f9def4; ">
@@ -106,7 +138,7 @@
                             <h5 class="card-title">FrotaMatch</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk
                                 of the card’s content.</p>
-                            <a href="#" class="btn btn-primary" style="background-color: #c693b9;">Vizualizar</a>
+                            <a href="#" class="btn btn-light text-light"  style="background-color: #c693b9;">Vizualizar</a>
                         </div>
                     </div>
 
@@ -120,7 +152,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-6 border border rounded-4" style="background-color: #5f4258;">
-                        <h1 style="color: #f9def4;">Projeto em destaque</h1>
+                        <h2 style="color: #f9def4;">Projeto em destaque</h2>
                         <p style="color: #f9def4;">A biblioteca da yas foi criada para servir como... Lorem ipsum dolor
                             sit amet consectetur adipisicing elit. Asperiores explicabo commodi, exercitationem ab rem
                             ea temporibus in maxime doloribus maiores neque earum corporis sapiente, adipisci
@@ -200,9 +232,41 @@
             </div>
         </section>
         <section id="Fim">
-            <footer>
+            <footer class="text-center text-white py-4" style="background-color: #5f4258;">
+                <div class="container">
+                    <p class="mb-3 fs-5">Vamos nos conectar?</p>
 
-            </footer>
+                    <div class="d-flex justify-content-center gap-3 mb-3">
+                        <a href="https://www.instagram.com/yasnalyze/" target="_blank" class="text-decoration-none"
+                            style="color: #f9def4;">
+                            Instagram
+                        </a>
+                        <span style="color: #c693b9;">|</span>
+
+                        <a href="https://github.com/" target="_blank" class="text-decoration-none"
+                            style="color: #f9def4;">
+                            Github
+                        </a>
+                        <span style="color: #c693b9;">|</span>
+
+                        <a href="https://www.youtube.com/channel/UCYRxmjtdi9lWDBDueDeHzqQ" target="_blank" class="text-decoration-none"
+                            style="color: #f9def4;">
+                            YouTube
+                        </a>
+                        <span style="color: #c693b9;">|</span>
+
+                        <a href="https://linkedin.com/in/SEU_USUARIO" target="_blank" class="text-decoration-none"
+                            style="color: #f9def4;">
+                            LinkedIn
+                        </a>
+                    </div>
+
+                    <div class="text-center pt-2 border-top"
+                        style="border-color: rgba(249, 222, 244, 0.2) !important; font-size: 0.9rem; color: #f9def4;">
+                        <p class="mb-0">&copy; 2026 Yasmin Teixeira.</p>
+                    </div>
+                </div>
+            </footer>>
         </section>
 
     </main>
