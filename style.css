@@ -3,9 +3,14 @@ h1 {
   font-weight: 400;
   font-style: normal;
   font-size: 160px;
-  position: absolute;
-  top: 20%;
-
+  /* Removeu o position: absolute e top: 20% */
+  margin-top: 10vh; /* Se quiser empurrar o título um pouco para baixo, use margem */
+}
+/* Quando a tela for menor que 768px (celulares), o título diminui para 70px */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 70px;
+  }
 }
 
 .ros6a{
@@ -16,13 +21,44 @@ h1 {
   color: white;
 }
 
-body {
 
-}
 
 #Inicio {
     background-image: url('img/png'); 
     background-size: cover;       
     background-position: center;  
     background-repeat: no-repeat;  
+}
+h2, h3, h4{
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p, li, ul, a, h5{
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+  
+    "SOFT" 0,
+    "WONK" 0;
+}
+/* links da Navbar  --- */
+.navbar-nav .nav-link:hover {
+    color: #D9C9C7 !important;
+    font-weight: bold;      
+    transition: color 0.3s ease; 
+}
+
+/* Rodapé)*/
+footer a:hover {
+    color: #ffffff !important;
+    text-shadow: 0px 0px 8px rgba(249, 222, 244, 0.6); 
+    transition: all 0.3s ease; 
+}
+/* Força as linhas do ícone hambúrguer a ficarem brancas */
+.navbar-toggler-icon {
+    filter: invert(1) brightness(2);
 }
