@@ -12,10 +12,13 @@ h1 {
     font-size: 70px;
   }
 }
-
-.ros6a{
- background-color: #c693b9; 
+@media(max-width: 576px ){
+  h1{
+    font-size: 35px;
+  }
 }
+
+
 
 .menu-nav{
   color: white;
