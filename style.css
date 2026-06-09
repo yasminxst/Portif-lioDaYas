@@ -65,3 +65,38 @@ footer a:hover {
 .navbar-toggler-icon {
     filter: invert(1) brightness(2);
 }
+
+#SobreMim{
+    background-image: url("img/AGORASIM.png");
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-color: #D9BAC0;
+    
+
+    min-height: 100vh;
+}
+
+
+
+
+
+.sobre-card{
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(10px);
+
+    padding: 2rem;
+    border-radius: 25px;
+
+    color: #5f4258;
+}
+
+.sobre-card h2{
+    color: #D9BAC0;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.sobre-card p{
+    line-height: 1.8;
+}
