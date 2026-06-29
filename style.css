@@ -3,10 +3,9 @@ h1 {
   font-weight: 400;
   font-style: normal;
   font-size: 160px;
-  /* Removeu o position: absolute e top: 20% */
-  margin-top: 10vh; /* Se quiser empurrar o título um pouco para baixo, use margem */
+  margin-top: 10vh; 
 }
-/* Quando a tela for menor que 768px (celulares), o título diminui para 70px */
+
 @media (max-width: 768px) {
   h1 {
     font-size: 70px;
