@@ -799,10 +799,6 @@ left:-80px;
 }
 
 @media (max-width:1199px){
-    .c3{
-        display:none;
-    }
-
     .c2{
         display:none;
     }
