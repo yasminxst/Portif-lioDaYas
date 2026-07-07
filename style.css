@@ -1,101 +1,289 @@
+:root {
+  --rose-1: #F2E4E4;
+  --rose-2: #D9BAC0;
+  --rose-3: #c693b9;
+  --text: #5f4258;
+  --cream: #F2F0EB;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: radial-gradient(circle at top, var(--rose-1) 0%, var(--rose-2) 40%, var(--rose-2) 100%);
+}
+
+main {
+  overflow-x: hidden;
+}
+
+section {
+  padding-block: 4rem;
+}
+
 h1 {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: 160px;
-  margin-top: 10vh; 
+  font-size: clamp(3rem, 8vw, 6.2rem);
+  margin: 0;
+  color: var(--rose-2);
 }
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 70px;
-  }
-}
-@media(max-width: 576px ){
-  h1{
-    font-size: 65px;
-  }
-}
-
-
-
-.menu-nav{
-  color: white;
-}
-
-
-
-#Inicio {
-    background-image: url('img/png'); 
-    background-size: cover;       
-    background-position: center;  
-    background-repeat: no-repeat;  
-}
-h2, h3, h4{
+h2, h3, h4 {
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
+  color: var(--text);
 }
 
-p, li, ul, a, h5{
-  font-family: "Fraunces", serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-variation-settings:
-  
-    "SOFT" 0,
-    "WONK" 0;
-}
-/* links da Navbar  --- */
-.navbar-nav .nav-link:hover {
-    color: #D9C9C7 !important;
-    font-weight: bold;      
-    transition: color 0.3s ease; 
+p, li, ul, a, h5, blockquote {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Rodapé)*/
-footer a:hover {
-    color: #ffffff !important;
-    text-shadow: 0px 0px 8px rgba(249, 222, 244, 0.6); 
-    transition: all 0.3s ease; 
+.navbar {
+  background-color: var(--rose-2) !important;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 4px 20px rgba(95, 66, 88, 0.15);
 }
-/* Força as linhas do ícone hambúrguer a ficarem brancas */
+
+.navbar-brand {
+  color: var(--cream) !important;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.navbar-toggler {
+  border-color: rgba(255,255,255,0.6);
+}
+
 .navbar-toggler-icon {
-    filter: invert(1) brightness(2);
+  filter: invert(1) brightness(2);
 }
 
-#SobreMim{
-    background-image: url("img/AGORASIM.png");
-    background-size: contain;
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-color: #D9BAC0;
-    
-
-    min-height: 100vh;
+.offcanvas {
+  background-color: var(--cream) !important;
 }
 
-
-
-
-
-.sobre-card{
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(10px);
-
-    padding: 2rem;
-    border-radius: 25px;
-
-    color: #5f4258;
+.navbar-nav .nav-link {
+  color: var(--text) !important;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-.sobre-card h2{
-    color: #D9BAC0;
-    font-size: 4rem;
-    margin-bottom: 1rem;
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--rose-3) !important;
 }
 
-.sobre-card p{
-    line-height: 1.8;
+#Inicio {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(242, 228, 228, 0.9), rgba(255, 255, 255, 0.45)), url('img/png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero-quote {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 1.5rem;
+  background-color: var(--rose-2);
+  color: #fff;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  text-align: center;
+}
+
+#SobreMim {
+  min-height: 100vh;
+  background: linear-gradient(90deg, rgba(217, 186, 192, 0.94), rgba(217, 186, 192, 0.85)), url('img/AGORASIM.png') left center/contain no-repeat;
+  background-color: var(--rose-2);
+  padding-block: 5rem;
+}
+
+.sobre-card {
+  max-width: 600px;
+  margin-left: auto;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(95, 66, 88, 0.16);
+  color: var(--text);
+}
+
+.sobre-card h2 {
+  color: var(--rose-3);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
+}
+
+.sobre-card p {
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.project-card {
+  width: min(100%, 16rem);
+  min-height: 100%;
+  background-color: var(--rose-1);
+  border: 0;
+  border-radius: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(95, 66, 88, 0.16);
+}
+
+.project-card .card-title {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.project-card .card-link {
+  color: var(--rose-3);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.gallery-shell {
+  background: rgba(255, 255, 255, 0.38);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 1.25rem;
+  box-shadow: 0 15px 35px rgba(95, 66, 88, 0.15);
+}
+
+.gallery-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-tab {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.7rem 1rem;
+  background-color: var(--rose-1);
+  color: var(--text);
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.gallery-tab.active,
+.gallery-tab:hover {
+  background-color: var(--rose-2);
+  color: #fff;
+}
+
+.gallery-panel {
+  display: none;
+}
+
+.gallery-panel.active {
+  display: block;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 10px 20px rgba(95, 66, 88, 0.16);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 15px 25px rgba(95, 66, 88, 0.22);
+}
+
+footer {
+  background-color: var(--rose-1);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+footer a:hover {
+  color: #ffffff !important;
+  text-shadow: 0 0 8px rgba(249, 222, 244, 0.6);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  #SobreMim {
+    background-size: cover;
+    background-position: center left;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-block: 3rem;
+  }
+
+  #Inicio {
+    padding-top: 4rem;
+  }
+
+  #SobreMim {
+    background-image: linear-gradient(180deg, rgba(217, 186, 192, 0.92), rgba(217, 186, 192, 0.9)), url('img/AGORASIM.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .sobre-card {
+    margin-left: 0;
+  }
+
+  .project-card {
+    width: min(100%, 100%);
+  }
+
+  .gallery-image {
+    height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 0.95rem;
+  }
+
+  .hero-quote {
+    padding: 1.25rem;
+    border-radius: 1rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .gallery-image {
+    height: 200px;
+  }
 }
